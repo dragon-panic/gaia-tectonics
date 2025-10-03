@@ -19,6 +19,45 @@ Add this to your `Cargo.toml`:
 tectonics = "0.1"
 ```
 
+## Try the GUI Demo
+
+Want to see the simulation in action? Download pre-built binaries from the [latest release](https://github.com/dragon-panic/tectonics/releases/latest):
+
+### Downloads
+
+| Platform | Architecture | Download |
+|----------|-------------|----------|
+| 🐧 Linux | x86_64 | `simple_gui-linux-x86_64` |
+| 🪟 Windows | x86_64 | `simple_gui-windows-x86_64.exe` |
+| 🍎 macOS | Intel (x86_64) | `simple_gui-macos-x86_64` |
+| 🍎 macOS | Apple Silicon (ARM64) | `simple_gui-macos-arm64` |
+
+### Running the GUI Demo
+
+**Linux/macOS:**
+```bash
+# Make the binary executable
+chmod +x simple_gui-*
+
+# Run it
+./simple_gui-linux-x86_64
+# or
+./simple_gui-macos-x86_64
+```
+
+**Windows:**
+```cmd
+# Just double-click or run from command line
+simple_gui-windows-x86_64.exe
+```
+
+The GUI provides:
+- Real-time plate motion visualization
+- Interactive simulation controls (play/pause/step)
+- Multiple projection modes (orthographic globe view, equirectangular flat map)
+- Live plate statistics and boundary analysis
+- Toggle features on/off to explore the simulation
+
 ## Quick Start
 
 ```rust
