@@ -1,0 +1,46 @@
+# Rust build artifacts
+/target/
+**/*.rs.bk
+*.pdb
+
+# Cargo lock file (uncomment if building a library)
+# Cargo.lock is typically committed for binaries but not for libraries
+# However, keeping it can help with reproducible builds
+# Cargo.lock
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Rust Analyzer
+rust-project.json
+
+# Debug builds
+debug/
+target/debug/
+target/*/debug/
+
+# Documentation build
+target/doc/
+
+# Testing
+target/tests/
+*.profraw
+*.profdata
+
+# Backup files
+*.bak
+*.tmp
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Environment files
+.env
+.env.local
+

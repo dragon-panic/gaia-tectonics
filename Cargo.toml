@@ -1,0 +1,27 @@
+[package]
+name = "tectonics"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "Voronoi-based tectonic plate simulation library for spherical geometry"
+repository = "https://github.com/yourusername/tectonics"
+license = "MIT OR Apache-2.0"
+keywords = ["tectonics", "geology", "simulation", "voronoi", "spherical"]
+categories = ["simulation", "science", "game-development"]
+readme = "README.md"
+
+[dependencies]
+rand = "0.8"
+noise = "0.9"
+
+# Optional GUI dependencies for examples
+eframe = { version = "0.28", optional = true }
+egui = { version = "0.28", optional = true }
+
+[dev-dependencies]
+rand = "0.8"
+
+[features]
+# Enable this feature to build GUI examples
+gui = ["eframe", "egui"]
+
