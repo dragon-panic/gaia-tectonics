@@ -1,9 +1,9 @@
-# Tectonics
+# Gaia Tectonics
 
 A Voronoi-based tectonic plate simulation library for spherical surfaces.
 
-[![Crates.io](https://img.shields.io/crates/v/tectonics.svg)](https://crates.io/crates/tectonics)
-[![Documentation](https://docs.rs/tectonics/badge.svg)](https://docs.rs/tectonics)
+[![Crates.io](https://img.shields.io/crates/v/gaia-tectonics.svg)](https://crates.io/crates/gaia-tectonics)
+[![Documentation](https://docs.rs/gaia-tectonics/badge.svg)](https://docs.rs/gaia-tectonics)
 [![License: MIT OR Apache-2.0](https://img.shields.io/badge/License-MIT%20OR%20Apache--2.0-blue.svg)](LICENSE)
 
 ## Overview
@@ -16,12 +16,12 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-tectonics = "0.1"
+gaia-tectonics = "0.1"
 ```
 
 ## Try the GUI Demo
 
-Want to see the simulation in action? Download pre-built binaries from the [latest release](https://github.com/dragon-panic/tectonics/releases/latest):
+Want to see the simulation in action? Download pre-built binaries from the [latest release](https://github.com/dragon-panic/gaia-tectonics/releases/latest):
 
 ### Downloads
 
@@ -61,7 +61,7 @@ The GUI provides:
 ## Quick Start
 
 ```rust
-use tectonics::{TectonicWorld, SphericalPoint};
+use gaia_tectonics::{TectonicWorld, SphericalPoint};
 
 // Create a world with 12 tectonic plates
 let mut world = TectonicWorld::new(12, 42);
@@ -98,6 +98,8 @@ Each plate has:
 - **Properties**: Mass, age, seed position
 
 ```rust
+use gaia_tectonics::{TectonicWorld, WorldConfig};
+
 let config = WorldConfig::new()
     .with_number_of_plates(15)
     .with_continental_fraction(0.3);  // 30% continental plates
@@ -213,7 +215,7 @@ This library is designed for:
 - **Educational tools** for plate tectonics
 - **Research** in spherical geometry and spatial algorithms
 
-For terrain generation (heightmaps, elevation), consider building on top of this library or using a companion crate like `tectonics-terrain`.
+For terrain generation (heightmaps, elevation), consider building on top of this library or using a companion crate like `gaia-terrain`.
 
 ## Design Principles
 

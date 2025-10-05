@@ -3,7 +3,7 @@
 //! These tests ensure that plate boundaries maintain proper connectivity
 //! as the simulation evolves, preventing gaps and discontinuities.
 
-use tectonics::*;
+use gaia_tectonics::*;
 
 #[test]
 fn boundaries_remain_continuous_after_evolution() {

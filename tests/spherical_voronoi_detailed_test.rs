@@ -1,6 +1,6 @@
 //! Comprehensive tests for spherical Voronoi diagram implementation
 
-use tectonics::*;
+use gaia_tectonics::*;
 use std::f64::consts::PI;
 
 const EPSILON: f64 = 1e-6;

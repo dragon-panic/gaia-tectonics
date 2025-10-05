@@ -1,10 +1,10 @@
 [package]
-name = "tectonics"
+name = "gaia-tectonics"
 version = "0.1.0"
 edition = "2021"
-authors = ["Your Name <your.email@example.com>"]
+authors = ["Dragon R. Sky <dragon@cryptopanic.org>"]
 description = "Voronoi-based tectonic plate simulation library for spherical geometry"
-repository = "https://github.com/dragon-panic/tectonics"
+repository = "https://github.com/dragon-panic/gaia-tectonics"
 license = "MIT OR Apache-2.0"
 keywords = ["tectonics", "geology", "simulation", "voronoi", "spherical"]
 categories = ["simulation", "science", "game-development"]

@@ -1,4 +1,4 @@
-//! # Tectonics - Spherical Tectonic Plate Simulation
+//! # Gaia Tectonics - Spherical Tectonic Plate Simulation
 //! 
 //! A Voronoi-based tectonic plate simulation library designed for realistic geological 
 //! modeling on spherical surfaces. This library provides:
@@ -24,13 +24,13 @@
 //! 
 //! ```toml
 //! [dependencies]
-//! tectonics = "0.1"
+//! gaia-tectonics = "0.1"
 //! ```
 //! 
 //! ## Basic Usage
 //! 
 //! ```rust
-//! use tectonics::{TectonicWorld, SphericalPoint};
+//! use gaia_tectonics::{TectonicWorld, SphericalPoint};
 //! 
 //! // Create a world with 12 plates using seed 42 for deterministic generation
 //! let mut world = TectonicWorld::new(12, 42);
@@ -61,7 +61,7 @@
 //! ## Advanced Configuration
 //! 
 //! ```rust
-//! use tectonics::{TectonicWorld, WorldConfig};
+//! use gaia_tectonics::{TectonicWorld, WorldConfig};
 //! 
 //! // Create a custom world with 80% continental plates
 //! let config = WorldConfig::new()
@@ -82,7 +82,7 @@
 //! ## Architecture
 //! 
 //! This library focuses purely on tectonic plate dynamics. For terrain generation
-//! and heightmap creation, consider using the companion `tectonics-terrain` crate.
+//! and heightmap creation, consider using the companion `gaia-terrain` crate.
 //! 
 //! ## Modules
 //! 

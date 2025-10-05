@@ -3,7 +3,7 @@
 //! These tests run the simulation for many steps to ensure that
 //! the tessellation remains valid and boundaries stay properly connected
 
-use tectonics::*;
+use gaia_tectonics::*;
 
 #[test]
 fn plates_remain_valid_over_thousand_steps() {

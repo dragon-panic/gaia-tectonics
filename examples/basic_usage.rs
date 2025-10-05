@@ -1,11 +1,11 @@
-//! Basic usage example for the tectonics library
+//! Basic usage example for the gaia-tectonics library
 //! 
 //! This example demonstrates Phase 1 functionality:
 //! - Creating a tectonic world with multiple plates
 //! - Querying which plate owns a given point
 //! - Accessing plate properties
 
-use tectonics::{TectonicWorld, SphericalPoint, WorldConfig};
+use gaia_tectonics::{TectonicWorld, SphericalPoint, WorldConfig};
 
 fn main() {
     println!("🌍 Tectonic Plate Simulation - Phase 4 Demo");
@@ -105,9 +105,9 @@ fn main() {
                  name, 
                  plate_id,
                  match plate.plate_type {
-                     tectonics::PlateType::Oceanic { .. } => "Oceanic",
-                     tectonics::PlateType::Continental { .. } => "Continental",
-                 });
+                    gaia_tectonics::PlateType::Oceanic { .. } => "Oceanic",
+                    gaia_tectonics::PlateType::Continental { .. } => "Continental",
+                });
     }
     
     println!("\n🔬 Testing boundary evolution over longer time:");
@@ -137,7 +137,7 @@ fn main() {
 
 fn display_plates(world: &TectonicWorld) {
     let continental_count = world.plates().iter()
-        .filter(|p| matches!(p.plate_type, tectonics::PlateType::Continental { .. }))
+        .filter(|p| matches!(p.plate_type, gaia_tectonics::PlateType::Continental { .. }))
         .count();
     let oceanic_count = world.num_plates() - continental_count;
     
@@ -145,8 +145,8 @@ fn display_plates(world: &TectonicWorld) {
     
     for plate in world.plates() {
         let plate_type = match plate.plate_type {
-            tectonics::PlateType::Oceanic { density } => format!("Oceanic (density: {:.2})", density),
-            tectonics::PlateType::Continental { density } => format!("Continental (density: {:.2})", density),
+            gaia_tectonics::PlateType::Oceanic { density } => format!("Oceanic (density: {:.2})", density),
+            gaia_tectonics::PlateType::Continental { density } => format!("Continental (density: {:.2})", density),
         };
         
         println!("    Plate {}: {} at ({:.1}°, {:.1}°)", 
@@ -184,12 +184,12 @@ fn display_boundaries(world: &TectonicWorld) {
     println!("  Example boundaries:");
     for (i, boundary) in world.boundaries().iter().take(3).enumerate() {
         let plate_a_type = match world.get_plate(boundary.plate_a).unwrap().plate_type {
-            tectonics::PlateType::Oceanic { .. } => "Oceanic",
-            tectonics::PlateType::Continental { .. } => "Continental",
+            gaia_tectonics::PlateType::Oceanic { .. } => "Oceanic",
+            gaia_tectonics::PlateType::Continental { .. } => "Continental",
         };
         let plate_b_type = match world.get_plate(boundary.plate_b).unwrap().plate_type {
-            tectonics::PlateType::Oceanic { .. } => "Oceanic",
-            tectonics::PlateType::Continental { .. } => "Continental",
+            gaia_tectonics::PlateType::Oceanic { .. } => "Oceanic",
+            gaia_tectonics::PlateType::Continental { .. } => "Continental",
         };
         
         println!("    Boundary {}: {} {} <-> {} {} ({})", 

@@ -11,7 +11,7 @@
 //! ```
 
 use eframe::egui;
-use tectonics::{TectonicWorld, SphericalPoint, PlateType, BoundaryType, WorldConfig};
+use gaia_tectonics::{TectonicWorld, SphericalPoint, PlateType, BoundaryType, WorldConfig};
 use std::f64::consts::PI;
 
 fn main() -> Result<(), eframe::Error> {
